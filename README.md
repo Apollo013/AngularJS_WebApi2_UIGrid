@@ -5,6 +5,8 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 
 #####FRAMEWORKS & PLUGINS
 
+| No.        | Description  |
+| -----------|:-------------:|
 | 1 | ASP.NET Web Api 2 |
 | 2 | OWIN |
 | 3 | Entity Framework 6.1.0 |
