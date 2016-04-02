@@ -22,40 +22,43 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 
 
 #####WEB API / DOT NET / C# FEATURES
-/**************************************************************************/
-* Extension Methods
-* Attribute Routing
-* Forcing Https Requests
-* Dynamic linq for sorting and filtering Linq Queries that makes use of extension methods.
-* OWIN setup & configuration
-* Repository, Unit of Work & Model Factory Patterns.
-* Dependancy Injection using Ninject.
-* Configuring domain entity tables using 'EntityTypeConfiguration' with ef migrations.
-* Creating custom 'IHttpActionResult' responses.
-* Unit Testing
-* Generic Repository
-* Exception Handling
-* Use of Reflection to check property names passed to controllers.
-* Logging using Microsoft.ApplicationInsights.Log4NetAppender
-* Recursion
-* CORS Enabled to accept only a single client from making requests, plus specifying 
-* Authorize attribute used to authorize access to specific endpoints
+
+| Description  |
+|:-------------:|
+| Extension Methods |
+| Forcing Https Requests |
+| Dynamic linq for sorting and filtering Linq Queries that makes use of extension methods. |
+| OWIN setup & configuration |
+| Attribute Routing |
+| Repository, Unit of Work & Model Factory Patterns. |
+| Dependancy Injection |
+| Configuring domain entity tables using 'EntityTypeConfiguration' with ef migrations. |
+| Creating custom 'IHttpActionResult' responses |
+| Unit Testing |
+| Generic Repository |
+| Exception Handling |
+| Use of Reflection to check property names passed to controllers |
+| Logging using Microsoft.ApplicationInsights.Log4NetAppender |
+| Recursion |
+| CORS Enabled to accept only a single client from making requests, plus specifying which verbs to accept |
+| Authorize attribute used to authorize access to specific endpoints |
 
 
 #####ANGULARJS FEATURES
-/**************************************************************************/
-* AngularJS $Http Interceptor for configuring Requests & response errors
-* Making Restful calls in AngularJS using $http.post, put, get, delete
-* Solving the Angularjs 404 routing error using the web.Config file (see admin client)
-* External Pagination with UI-Grid
-* External Sorting with UI-Grid
-* External Filtering with UI-Grid
-* Displaying non-blocking notifications using Toastr
-* Displaying loading bar during http requests
+
+| Description  |
+|:-------------:|
+| AngularJS $Http Interceptor for configuring Requests & response errors |
+| Making Restful calls in AngularJS using $http.post, put, get, delete |
+| Solving the Angularjs 404 routing error using the web.Config file (see admin client) |
+| External Pagination with UI-Grid |
+| External Sorting with UI-Grid |
+| External Filtering with UI-Grid |
+| Displaying non-blocking notifications using Toastr |
+| Displaying loading bar during http requests |
 
 
 #####Structure
-/**************************************************************************/
 
 | Project Name        | Type           | Description  |
 | ---------------- |:-------------:| -----:|
