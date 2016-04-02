@@ -4,18 +4,18 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 
 
 #####FRAMEWORKS & PLUGINS
-1. ASP.NET Web Api 2
-2. OWIN
-3. Entity Framework 6.1.0
-4. Ninject
-5. Dynamic Linq
-6. AngularJS, ngRoute, ngAnimate - 1.4.9
-7. AngularJS Toaster
-8. AngularJS Loading Bar
-9. AngularJS UI-Grid
-10. Hoe HTML Template
-11. Bootstrap V4 alpha
-12. jQuery
+|1.| ASP.NET Web Api 2|
+|2.| OWIN|
+|3.| Entity Framework 6.1.0 |
+|4.| Ninject|
+|5.| Dynamic Linq|
+|6.| AngularJS, ngRoute, ngAnimate - 1.4.9|
+|7.| AngularJS Toaster|
+|8.| AngularJS Loading Bar|
+|9.| AngularJS UI-Grid|
+|10.| Hoe HTML Template|
+|11.| Bootstrap V4 alpha|
+|12.| jQuery|
 
 
 #####WEB API / DOT NET / C# FEATURES
