@@ -4,9 +4,9 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 
 
 #####FRAMEWORKS & PLUGINS
-1. ASP.NET WEB API 2
+1. ASP.NET Web Api 2
 2. OWIN
-3. ENTITY FRAMEWORK 6.1.0
+3. Entity Framework 6.1.0
 4. Ninject
 5. Dynamic Linq
 6. AngularJS, ngRoute, ngAnimate - 1.4.9
@@ -43,10 +43,21 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 /**************************************************************************/
 * AngularJS $Http Interceptor for configuring Requests & response errors
 * Making Restful calls in AngularJS using $http.post, put, get, delete
-* Solving the Angularjs 404 routing error using the web.Config file
+* Solving the Angularjs 404 routing error using the web.Config file (see admin client)
 * External Pagination with UI-Grid
 * External Sorting with UI-Grid
 * External Filtering with UI-Grid
 * Displaying non-blocking notifications using Toastr
 * Displaying loading bar during http requests
+
+
+#####Structure
+/**************************************************************************/
+| Project Name        | Type           | Description  |
+| ---------------- |:-------------:| -----:|
+| AdminClient     | Empty Asp.Net Web Project | $1600 |
+| BusinessServices      |  Class Library      |   $12 |
+| DataAccessLayer | Class Library      |    $1 |
+| DataService | Web Api 2 | Resource Provider |
+
 
