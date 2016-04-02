@@ -1,0 +1,85 @@
+﻿.uigrid {
+    position:absolute;
+    top:40px;
+    left:2px;
+    right:2px;
+    bottom:0;
+}
+
+.list-nav-bar {
+    position:absolute;
+    top:5px;
+    right:2px;
+    left:2px;
+}
+
+.ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+    background-color:#278BCE !important;
+    color: #FFFFFF !important;
+}
+
+.insert-button {
+    position:absolute;
+    top:5px;
+    right:10px;
+}
+
+.inner-content {
+    min-height: 800px !important;
+}
+
+#main-content {
+    background-color: #FFFFFF;
+}
+
+.profile-box .media-body{
+    padding-left: 5px;
+}
+
+h5.media-heading span {
+	font-size: 1.05rem !important;
+}
+
+.media-body small {
+	font-size: 95% !important;
+}
+
+/*
+
+    .css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+}
+
+.css-form input.ng-valid.ng-touched {
+    background-color: #78FA89;
+}
+
+@media (min-width: 1280px) {
+  .uigrid {
+    width: 100%;
+    width: 972px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .uigrid {
+    width: 100%;
+    width: 772px;
+  }
+}
+
+
+@media (min-height: 768px) {
+  .uigrid {
+    width: 100%;
+    height: 480px;
+  }
+}
+
+@media (min-height: 900px) {
+  .uigrid {
+    width: 100%;
+    height: 615px;
+  }
+}
+    */

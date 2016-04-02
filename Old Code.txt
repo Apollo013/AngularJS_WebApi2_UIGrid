@@ -1,0 +1,349 @@
+========================
+404 REFRESH ERROR
+========================
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<system.webServer>
+		<rewrite>
+		  <!--This directive was not converted because it is not supported by IIS: RewriteBase /.-->
+		  <rules>
+			<rule name="Imported Rule 1" stopProcessing="true">
+			  <match url="^index\.html" ignoreCase="false" />
+			  <action type="None" />
+			</rule>
+			<rule name="Imported Rule 2" stopProcessing="true">
+			  <match url="." ignoreCase="false" />
+			  <conditions>
+				<add input="{REQUEST_FILENAME}" matchType="IsFile" ignoreCase="false" negate="true" />
+				<add input="{REQUEST_FILENAME}" matchType="IsDirectory" ignoreCase="false" negate="true" />
+			  </conditions>
+			  <action type="Rewrite" url="/index.html" />
+			</rule>
+		  </rules>
+		</rewrite>
+	  </system.webServer>
+</configuration>
+
+RewriteEngine On 
+Options FollowSymLinks
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^index\.html$ [L]
+^(.*)$ /#/$1 [L]
+
+
+========================
+PREDICATE BUILDER
+========================
+using System;
+using System.Linq.Expressions;
+
+namespace WorkingWithWebApi2.BusinessServices.Helpers.Predicates.Abstract
+{
+    public interface IPredicateBuilder<TEntity>
+    {
+        Expression<Func<TEntity, bool>> Build(string filterString);
+    }
+}
+
+
+========================
+PREDICATE PROVIDER
+========================
+using WorkingWithWebApi2.BusinessServices.Helpers.Predicates.Abstract;
+using WorkingWithWebApi2.Models.DomainEntities;
+
+namespace WorkingWithWebApi2.BusinessServices.Helpers.Predicates.Concrete
+{
+    /// <summary>
+    /// Provider Class allowing us access to Predicate Builders used for dynamic filtering of linq queries
+    /// </summary>
+    public class PredicateProvider
+    {
+
+        /// <summary>
+        /// Product predicate builder
+        /// </summary>
+        private IPredicateBuilder<Product> productPredicate;
+        public IPredicateBuilder<Product> ProductPredicate
+        {
+            get
+            {
+                if(productPredicate == null)
+                {
+                    productPredicate = new ProductPredicate();
+                }
+                return productPredicate;
+            }
+        }
+
+    }
+}
+
+==========================
+PRODUCT PREDICATE BUILDER
+==========================
+using LinqKit;
+using System;
+using System.Linq.Expressions;
+using WorkingWithWebApi2.BusinessServices.Helpers.Predicates.Abstract;
+using WorkingWithWebApi2.Models.DomainEntities;
+
+namespace WorkingWithWebApi2.BusinessServices.Helpers.Predicates.Concrete
+{
+    /// <summary>
+    /// Product Predicate Builder
+    /// </summary>
+    public class ProductPredicate : IPredicateBuilder<Product>
+    {
+        /// <summary>
+        /// Builds
+        /// </summary>
+        /// <param name="filterString"></param>
+        /// <returns></returns>
+        public Expression<Func<Product, bool>> Build(string filterString)
+        {
+            // The filterString could have multiple filter criteria seperated by a comma,
+            // Each filter criteria is made up of a key/value pair which are sperated by a colon.
+
+            // Predicate object
+            var predicate = PredicateBuilder.True<Product>();
+            bool tempBool = false;
+            short tempShort = 0;
+            decimal tempDecimal = 0.00m;
+
+            // Split each criteria into an array
+            string[] filterCriteria = filterString.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+            // Iterate through each criteria
+            foreach (string criteria in filterCriteria)
+            {
+                string[] criteriaKeyPair = criteria.Split(':');
+                string key = criteriaKeyPair[0];
+                string value = criteriaKeyPair[1];
+
+                switch (key) {
+                    case "productName" :
+                        predicate = predicate.And(p => p.ProductName.Contains(value));
+                        break;
+                    case "categoryName":
+                        predicate = predicate.And(p => p.Category.CategoryName.Contains(value));
+                        break;
+                    case "supplierName":
+                        predicate = predicate.And(p => p.Supplier.CompanyName.Contains(value));
+                        break;
+                    case "quantityPerUnit":
+                        predicate = predicate.And(p => p.QuantityPerUnit.Contains(value));
+                        break;
+                    case "discontinued":                        
+                        if (Boolean.TryParse(value, out tempBool)) { predicate = predicate.And(p => p.Discontinued == tempBool); }
+                        break;
+                    case "unitPrice":                        
+                        if (Decimal.TryParse(value, out tempDecimal)) { predicate = predicate.And(p => p.UnitPrice == tempDecimal); }
+                        break;
+                    case "unitsInStock":
+                        if (short.TryParse(value, out tempShort)) { predicate = predicate.And(p => p.UnitsInStock == tempShort); }
+                        break;
+                    case "unitsOnOrder":
+                        if (short.TryParse(value, out tempShort)) {  predicate = predicate.And(p => p.UnitsOnOrder == tempShort); }
+                        break;
+                    case "reorderLevel":
+                        if (short.TryParse(value, out tempShort)) { predicate = predicate.And(p => p.ReorderLevel == tempShort); }
+                        break;
+                    default:
+                        throw new NotImplementedException($"Product Predicate Not Implemented : '{key}'"); 
+                }
+            }
+            return predicate;
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+========================
+DYNAMIC QUERY - ORDERBY
+========================
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Dynamic;
+
+// Thanks to Jerrie Pelser for the following code: http://www.jerriepelser.com/blog/webapi-angular-grid-part-4
+
+namespace WorkingWithWebApi2.BusinessServices.Helpers.Extensions
+{
+    /// <summary>
+    /// Extension class used for dynamic sorting of linq queries.
+    /// </summary>
+    public static class QuerySortingExtensions
+    {
+        public static IQueryable<T> ApplySorting<T>(this IQueryable<T> query, IEnumerable<string> sortCriteria) where T : class
+        {
+            if (sortCriteria != null)
+            {
+                List<string> sortFields = new List<string>();
+
+                foreach (string sortField in sortCriteria)
+                {
+                    if (sortField.StartsWith("+"))
+                    {
+                        sortFields.Add($"{sortField.TrimStart('+')} ASC");
+                    }
+                    else if (sortField.StartsWith("-"))
+                    {
+                        sortFields.Add($"{sortField.TrimStart('-')} DESC");
+                    }
+                    else
+                    {
+                        sortFields.Add(sortField);
+                    }
+                }
+
+                return query.OrderBy(string.Join(",", sortFields));
+            }
+
+            return query;
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+=================
+LINQKIT
+=================        
+		public PagedResultViewModel<ProductListViewModel> GetPageResult(int pageNo, int pageSize, string orderBy, string filter)
+        {                       
+            IQueryable<Product> productsQuery = repositoryManager.ProductRepository.Query( new string[] { "Category", "Supplier" }).AsExpandable(); // Build Query
+            int skip = (pageNo - 1) * pageSize;             // Calculate number of records to skip         
+            long totalRecordCount = productsQuery.Count();  // Get total number of records
+                        
+            // Filter
+            if (!string.IsNullOrEmpty(filter))
+            {
+                productsQuery = productsQuery.Where(PredicateProvider.ProductPredicate.Build(filter));
+            }
+
+            // Sort
+            string[] tempOrderBy = new string[1];
+            if (!string.IsNullOrEmpty(orderBy))
+            {
+                productsQuery = productsQuery.ApplySorting(tempOrderBy);
+            }
+            else
+            {
+                productsQuery = productsQuery.OrderBy(p => p.ProductName); // Default
+            }
+
+            // Grab records & return
+            var products = productsQuery
+                .Skip(skip)
+                .Take(pageSize)
+                .ToList()
+                .Select(p => modelFactory.CreateListViewModel(p));
+
+            return (products.Any()) ? new PagedResultViewModel<ProductListViewModel>(products, pageNo, pageSize, totalRecordCount) : null;
+          
+        }
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+		                
+				if (key.Contains("productName"))
+                {
+                    predicate = predicate.And(p => p.ProductName.Contains(value));
+                }
+                else if (key.Contains("categoryName"))
+                {
+                    predicate = predicate.And(p => p.Category.CategoryName.Contains(value));
+                }
+                else if (key.Contains("supplierName"))
+                {
+                    predicate = predicate.And(p => p.Supplier.CompanyName.Contains(value));
+                }
+                else if (key.Contains("quantityPerUnit"))
+                {
+                    predicate = predicate.And(p => p.QuantityPerUnit.Contains(value));
+                }
+				                else if (key.Contains("unitPrice"))
+                {
+                    decimal temp = 0.00m;
+                    if (Decimal.TryParse(value, out temp))
+                    {
+                        predicate = predicate.And(p => p.UnitPrice == temp);
+                    }
+                }
+                else if (key.Contains("unitsInStock"))
+                {
+                    short temp = 0;
+                    if (short.TryParse(value, out temp))
+                    {
+                        predicate = predicate.And(p => p.UnitsInStock == temp);
+                    }
+                }
+                else if (key.Contains("unitsOnOrder"))
+                {
+                    short temp = 0;
+                    if (short.TryParse(value, out temp))
+                    {
+                        predicate = predicate.And(p => p.UnitsOnOrder == temp);
+                    }
+                }
+                else if (key.Contains("reorderLevel"))
+                {
+                    short temp = 0;
+                    if (short.TryParse(value, out temp))
+                    {
+                        predicate = predicate.And(p => p.ReorderLevel == temp);
+                    }
+                }
+                else if (key.Contains("discontinued"))
+                {
+                    bool temp = false;
+                    if (Boolean.TryParse(value, out temp))
+                    {
+                        predicate = predicate.And(p => p.Discontinued == temp);
+                    }
+                }
+                else
+                {
+                    throw new NotImplementedException("Product Predicate Not Implemented");
+                }
+                        //throw new NotImplementedException($"{key} : Product Predicate Not Implemented");
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+==================== DYNAMIC WHERE ===========================
+public static IEnumerable<MyObject> WhereQuery(IEnumerable<MyObject> source, string columnName, string propertyValue)
+         {
+             return source.Where(m => { return m.GetType().GetProperty(columnName).GetValue(m, null).ToString().StartsWith(propertyValue); });
+
+ }
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------
+ public static Func<ObjT, bool> PropertyCheck<ObjT, PropT>(string propertyName, Expression<Func<PropT, bool>> predicate)
+{
+    var paramExpr = Expression.Parameter(typeof(ObjT));
+    var propExpr = Expression.Property(paramExpr, propertyName);
+    return Expression.Lambda<Func<ObjT, bool>>(Expression.Invoke(predicate, propExpr), paramExpr).Compile();
+}
+foos.Where(PropertyCheck<Foo, int>("MyId", x => idList.Contains(x)));
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+// a reference parameter
+var x = Expression.Parameter(typeof (YourType), "x");
+
+// contains method
+var containsMethod = typeof (string).GetMethod("Contains", new[] {typeof (string)});
+
+// reference a field
+var fieldExpression = Expression.Property(instance, "PropertyName");
+
+// your value
+var valueExpression = Expression.Constant(yourId);
+
+// call the contains from a property and apply the value
+var containsValueExpression = Expression.Call(fieldExpression, containsMethod, valueExpression);
+
+// create your final lambda Expression
+var filterLambda = Expression.Lambda<Func<YourType, bool>>(containsValueExpression, x);
+
+// apply on your query
+q = q.Where(finalLambda);
+-----------------------------------------------------------------------------------------------------------------------
+
+

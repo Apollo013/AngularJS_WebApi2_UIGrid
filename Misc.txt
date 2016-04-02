@@ -1,0 +1,62 @@
+/**************************************************************************/
+NUGET PACKAGE MANAGER CONSOLE COMMANDS
+/**************************************************************************/
+Install-Package EntityFramework -Version 6.1.0
+
+Install-Package System.Linq.Dynamic
+
+Install-Package Microsoft.AspNet.WebApi.Owin -Version 5.2.2
+Install-Package Microsoft.Owin.Host.SystemWeb -Version 3.0.0
+
+Install-Package Ninject.Web.Common.OwinHost
+Install-Package Ninject.Web.WebApi.OwinHost
+Install-Package Microsoft.AspNet.WebApi.Owin
+Install-Package Ninject
+
+
+
+
+/**************************************************************************/
+FRAMEWORKS & PLUGINS
+/**************************************************************************/
+(1) ASP.NET WEB API 2
+(2) OWIN
+(3) ENTITY FRAMEWORK 6.1.0
+(4) Ninject
+(5) AngularJS, ngRoute, ngAnimate - 1.4.9
+(6) Hoe HTML Template
+(7) AngularJS Loading Bar
+(8) AngularJS UI-Grid
+(9) Bootstrap 3.3.5
+(10) Dynamic Linq
+(11) AngularJS Toaster
+
+
+/**************************************************************************/
+FEATURES
+/**************************************************************************/
+Extension Methods
+Attribute Routing
+Forcing Https Requests
+External Pagination with UI-Grid
+External Sorting with UI-Grid
+External Filtering with UI-Grid
+AngularJS $Http Interceptor for configuring Requests & response errors
+Making Restful calls in AngularJS using $http.post, put, get, delete
+Dynamic linq for sorting and filtering Linq Queries that makes use of extension methods.
+OWIN setup & configuration
+Repository, Unit of Work & Model Factory Patterns.
+Dependancy Injection using Ninject.
+Configuring domain entity tables using 'EntityTypeConfiguration' with ef migrations.
+Creating custom 'IHttpActionResult' responses.
+Unit Testing
+Generic Repository
+Exception Handling
+Solving the Angularjs 404 routing error using the web.Config file
+Displaying non-blocking notifications using Toastr
+Use of Reflection to check property names passed to controllers.
+Logging using Microsoft.ApplicationInsights.Log4NetAppender
+Recursion
+CORS Enabled to accept only a single client from making requests, plus specifying 
+Authorize attribute used to authorize access to specific endpoints
+

@@ -1,0 +1,5 @@
+2016-03-21 18:21:34,093 INFO WorkingWithWebApi2.DataService.Controllers.ProductsController - hello
+2016-03-21 18:37:13,118 INFO RuntimeType - hello
+2016-03-21 18:41:44,074 INFO RuntimeType - hello
+2016-03-21 18:58:57,315 INFO WorkingWithWebApi2.DataService.Controllers.ProductsController - hello
+2016-03-21 19:48:05,054 INFO WorkingWithWebApi2.DataService.Controllers.ProductsController - hello

@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithWebApi2.DataAccessLayer", "WorkingWithWebApi2.DataAccessLayer\WorkingWithWebApi2.DataAccessLayer.csproj", "{5DB2F164-9D9B-4241-9F4B-5F11F35C5B89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36F819FC-DDEC-4138-B433-F3365225BBD8}"
+	ProjectSection(SolutionItems) = preProject
+		Misc.txt = Misc.txt
+		Old Code.txt = Old Code.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithWebApi2.Repositories", "WorkingWithWebApi2.Repositories\WorkingWithWebApi2.Repositories.csproj", "{3441279D-9293-4120-A2BA-BD884C81AE21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithWebApi2.UnitTests", "WorkingWithWebApi2.UnitTests\WorkingWithWebApi2.UnitTests.csproj", "{C8D79E74-056E-461F-976C-863ED97C8803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithWebApi2.DataService", "WorkingWithWebApi2.DataService\WorkingWithWebApi2.DataService.csproj", "{09C935EB-0E44-41EF-A8CC-1B33E4648BB2}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WorkingWithWebApi2.AdminClient", "WorkingWithWebApi2.AdminClient\", "{6F6161A4-DAF2-4AB9-B9BC-9CBE973AE711}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64231"
+		Debug.AspNetCompiler.PhysicalPath = "WorkingWithWebApi2.AdminClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64231\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64231"
+		Release.AspNetCompiler.PhysicalPath = "WorkingWithWebApi2.AdminClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64231\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64231"
+		SlnRelativePath = "WorkingWithWebApi2.AdminClient\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithWebApi2.Models.DomainEntities", "WorkingWithWebApi2.Models.DomainEntities\WorkingWithWebApi2.Models.DomainEntities.csproj", "{41F1543F-DC29-4787-A943-86CF1D0F8812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithWebApi2.Models.ViewModels", "WorkingWithWebApi2.Models.ViewModels\WorkingWithWebApi2.Models.ViewModels.csproj", "{A341570C-AB12-4BFC-B573-9C167E67BD7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithWebApi2.BusinessServices", "WorkingWithWebApi2.BusinessServices\WorkingWithWebApi2.BusinessServices.csproj", "{3BC61055-4E13-476E-97E8-524B6D03C52A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DB2F164-9D9B-4241-9F4B-5F11F35C5B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB2F164-9D9B-4241-9F4B-5F11F35C5B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB2F164-9D9B-4241-9F4B-5F11F35C5B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB2F164-9D9B-4241-9F4B-5F11F35C5B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3441279D-9293-4120-A2BA-BD884C81AE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3441279D-9293-4120-A2BA-BD884C81AE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3441279D-9293-4120-A2BA-BD884C81AE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3441279D-9293-4120-A2BA-BD884C81AE21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D79E74-056E-461F-976C-863ED97C8803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D79E74-056E-461F-976C-863ED97C8803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D79E74-056E-461F-976C-863ED97C8803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D79E74-056E-461F-976C-863ED97C8803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C935EB-0E44-41EF-A8CC-1B33E4648BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C935EB-0E44-41EF-A8CC-1B33E4648BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C935EB-0E44-41EF-A8CC-1B33E4648BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C935EB-0E44-41EF-A8CC-1B33E4648BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F6161A4-DAF2-4AB9-B9BC-9CBE973AE711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F6161A4-DAF2-4AB9-B9BC-9CBE973AE711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F6161A4-DAF2-4AB9-B9BC-9CBE973AE711}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F6161A4-DAF2-4AB9-B9BC-9CBE973AE711}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{41F1543F-DC29-4787-A943-86CF1D0F8812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41F1543F-DC29-4787-A943-86CF1D0F8812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41F1543F-DC29-4787-A943-86CF1D0F8812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41F1543F-DC29-4787-A943-86CF1D0F8812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A341570C-AB12-4BFC-B573-9C167E67BD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A341570C-AB12-4BFC-B573-9C167E67BD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A341570C-AB12-4BFC-B573-9C167E67BD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A341570C-AB12-4BFC-B573-9C167E67BD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC61055-4E13-476E-97E8-524B6D03C52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC61055-4E13-476E-97E8-524B6D03C52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC61055-4E13-476E-97E8-524B6D03C52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC61055-4E13-476E-97E8-524B6D03C52A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

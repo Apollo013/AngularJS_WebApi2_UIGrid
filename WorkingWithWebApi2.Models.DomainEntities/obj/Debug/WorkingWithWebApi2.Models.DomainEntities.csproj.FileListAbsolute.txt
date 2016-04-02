@@ -1,0 +1,9 @@
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.Models.DomainEntities\bin\Debug\WorkingWithWebApi2.Models.DomainEntities.dll.config
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.Models.DomainEntities\bin\Debug\WorkingWithWebApi2.Models.DomainEntities.dll
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.Models.DomainEntities\bin\Debug\WorkingWithWebApi2.Models.DomainEntities.pdb
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.Models.DomainEntities\bin\Debug\EntityFramework.dll
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.Models.DomainEntities\bin\Debug\EntityFramework.SqlServer.dll
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.Models.DomainEntities\bin\Debug\EntityFramework.xml
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.Models.DomainEntities\bin\Debug\EntityFramework.SqlServer.xml
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.Models.DomainEntities\obj\Debug\WorkingWithWebApi2.Models.DomainEntities.dll
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.Models.DomainEntities\obj\Debug\WorkingWithWebApi2.Models.DomainEntities.pdb

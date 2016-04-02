@@ -1,0 +1,12 @@
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\bin\Debug\WorkingWithWebApi2.DataAccessLayer.dll.config
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\bin\Debug\WorkingWithWebApi2.DataAccessLayer.dll
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\bin\Debug\WorkingWithWebApi2.DataAccessLayer.pdb
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\obj\Debug\WorkingWithWebApi2.DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\obj\Debug\WorkingWithWebApi2.DataAccessLayer.dll
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\obj\Debug\WorkingWithWebApi2.DataAccessLayer.pdb
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\bin\Debug\WorkingWithWebApi2.Models.DomainEntities.dll
+C:\App Tests\WEBAPI\WorkingWithWebApi2\WorkingWithWebApi2.DataAccessLayer\bin\Debug\WorkingWithWebApi2.Models.DomainEntities.pdb

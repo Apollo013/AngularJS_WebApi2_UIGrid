@@ -1,0 +1,13 @@
+﻿<div class="panel-body">
+    <div class="btn-toolbar list-nav-bar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group pull-right" role="group" aria-label="First group">
+            <button type="button" class="btn btn-primary btn-sm" ng-click="new()">New</button>
+            <button type="button" class="btn btn-primary btn-sm" ng-click="edit()">Edit</button>
+            <button type="button" class="btn btn-primary btn-sm" ng-click="delete()">Delete</button>
+        </div>
+        <h4 class="pull-right" style="padding-right: 5px; padding-top: 3px;">Products</h4>
+    </div>
+    <div class="container-fluid">        
+        <div ui-grid="gridOptions" ui-grid-pagination ui-grid-selection ui-grid-auto-resize class="uigrid"></div>
+    </div>
+    </div>

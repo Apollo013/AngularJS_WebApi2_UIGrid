@@ -1,0 +1,64 @@
+﻿<form name="form" novalidate class="css-form">
+    <div class="form-group" ng-class="{ 'has-danger' : form.productName.$invalid}">
+        <label class="form-control-label" for="productName">Name</label>
+        <input type="text" name="productName" class="form-control" ng-class="{'form-control-danger' : form.productName.$invalid}" ng-model="product.productName" required ng-minlength="1" ng-maxlength="40">
+        <p ng-show="form.productName.$error.required" class="help-block form-control-label">Product name is required.</p>
+        <p ng-show="form.productName.$error.minlength" class="help-block form-control-label">Product name is too short.</p>
+        <p ng-show="form.productName.$error.maxlength" class="help-block form-control-label">Product name is too long.</p>
+    </div>
+    <div class="form-group" ng-class="{ 'has-danger' : form.supplierID.$invalid}">
+        <label class="form-control-label" for="supplierID">Supplier</label>
+        <select name="supplierID" class="form-control" ng-model="product.supplierID" ng-options="supplier.id as supplier.name for supplier in suppliers"></select>
+    </div>
+    <div class="form-group" ng-class="{ 'has-danger' : form.categoryID.$invalid}">
+        <label class="form-control-label" for="categoryID">Category</label>
+        <select name="categoryID" class="form-control" ng-model="product.categoryID" ng-options="category.id as category.name for category in categories"></select>
+    </div>
+    <div class="form-group" ng-class="{ 'has-danger' : form.unitPrice.$invalid}">
+        <label class="form-control-label" for="unitPrice">Unit Price</label>
+        <input type="number" name="unitPrice" class="form-control" ng-class="{'form-control-danger' : form.unitPrice.$invalid}" ng-model="product.unitPrice" min="0.01" max="79228162514264337593543950335.00" required >
+        <p ng-show="form.unitPrice.$error.required" class="help-block form-control-label">Unit price is required.</p>
+        <p ng-show="form.unitPrice.$error.number" class="help-block form-control-label">Unit price is not a number</p>
+        <p ng-show="form.unitPrice.$error.min" class="help-block form-control-label">Unit price must be greater than 0.00</p>
+        <p ng-show="form.unitPrice.$error.max" class="help-block form-control-label">Unit price must be less than 79228162514264337593543950336.00</p>
+    </div>
+    <div class="form-group" ng-class="{ 'has-danger' : form.unitsInStock.$invalid}">
+        <label class="form-control-label" for="unitsInStock">Units in Stock</label>
+        <input type="number" name="unitsInStock" class="form-control" ng-class="{'form-control-danger' : form.unitsInStock.$invalid}" ng-model="product.unitsInStock" min="0" max="32767" required>
+        <p ng-show="form.unitsInStock.$error.required" class="help-block form-control-label">Units in stock is required.</p>
+        <p ng-show="form.unitsInStock.$error.number" class="help-block form-control-label">Units in stock is not a number</p>
+        <p ng-show="form.unitsInStock.$error.min" class="help-block form-control-label">Units in stock must not be a negative number</p>
+        <p ng-show="form.unitsInStock.$error.max" class="help-block form-control-label">Units in stock must be less than 32768</p>
+    </div>
+    <div class="form-group" ng-class="{ 'has-danger' : form.unitsOnOrder.$invalid}">
+        <label class="form-control-label" for="unitsOnOrder">Units on Order</label>
+        <input type="number" name="unitsOnOrder" class="form-control" ng-class="{'form-control-danger' : form.unitsOnOrder.$invalid}" ng-model="product.unitsOnOrder" min="0" max="32767" required>
+        <p ng-show="form.unitsOnOrder.$error.required" class="help-block form-control-label">Units on order is required.</p>
+        <p ng-show="form.unitsOnOrder.$error.number" class="help-block form-control-label">Units on order is not a number</p>
+        <p ng-show="form.unitsOnOrder.$error.min" class="help-block form-control-label">Units on order must not be a negative number</p>
+        <p ng-show="form.unitsOnOrder.$error.max" class="help-block form-control-label">Units on order must be less than 32768</p>
+    </div>
+    <div class="form-group" ng-class="{ 'has-danger' : form.reorderLevel.$invalid}">
+        <label class="form-control-label" for="reorderLevel">Reorder Level</label>
+        <input type="number" name="reorderLevel" class="form-control" ng-class="{'form-control-danger' : form.reorderLevel.$invalid}" ng-model="product.reorderLevel" min="0" max="32767" required>
+        <p ng-show="form.reorderLevel.$error.required" class="help-block form-control-label">Reorder level is required.</p>
+        <p ng-show="form.reorderLevel.$error.number" class="help-block form-control-label">Reorder level is not a number</p>
+        <p ng-show="form.reorderLevel.$error.min" class="help-block form-control-label">Reorder level must not be a negative number</p>
+        <p ng-show="form.reorderLevel.$error.max" class="help-block form-control-label">Reorder level must be less than 32768</p>
+    </div>
+    <div class="form-group" ng-class="{ 'has-danger' : form.discontinued.$invalid}">
+        <label class="c-input c-checkbox">
+            <input type="checkbox" name="discontinued" ng-model="product.discontinued">
+            <span class="c-indicator"></span>
+            Discontinued
+        </label>
+    </div>    
+    <div class="form-group row">
+        <input type="hidden" ng-model="product.productID" />
+        <input type="hidden" ng-model="product.rowVersion" />
+    </div>    
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="button" class="btn btn-danger btn-sm pull-right" ng-click="cancel()">Cancel</button>
+        <button type="button" class="btn btn-primary btn-sm pull-right" ng-click="save(product)">Save</button>
+    </div>
+</form>
