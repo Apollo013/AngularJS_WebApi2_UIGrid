@@ -4,7 +4,6 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 
 
 #####FRAMEWORKS & PLUGINS
-/**************************************************************************/
 1. ASP.NET WEB API 2
 2. OWIN
 3. ENTITY FRAMEWORK 6.1.0
@@ -19,7 +18,6 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 12. jQuery
 
 
-/**************************************************************************/
 #####WEB API / DOT NET / C# FEATURES
 /**************************************************************************/
 * Extension Methods
