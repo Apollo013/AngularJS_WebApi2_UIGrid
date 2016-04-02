@@ -60,11 +60,15 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 
 #####Structure
 
-| Project Name        | Type           | Description  |
-| ---------------- |:-------------:| -----:|
-| AdminClient     | Empty Asp.Net Web Project | $1600 |
-| BusinessServices      |  Class Library      |   $12 |
-| DataAccessLayer | Class Library      |    $1 |
-| DataService | Web Api 2 | Resource Provider |
+| Project Name        | Project Type           | 
+| ---------------- |-------------|
+| AdminClient     | Empty Web Project | 
+| BusinessServices      |  Class Library      | 
+| DataAccessLayer | Class Library      | 
+| DataService | Web Api 2 | 
+| Models.DomainEntities | Class Library | 
+| Models.ViewModels | Class Library | 
+| Repositories | Class Library | 
+| UnitTests | Unit Test | 
 
 
