@@ -6,7 +6,7 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 #####FRAMEWORKS & PLUGINS
 
 | No.        | Description  |
-| -----------|:-------------:|
+| -----------|-------------|
 | 1 | ASP.NET Web Api 2 |
 | 2 | OWIN |
 | 3 | Entity Framework 6.1.0 |
@@ -24,7 +24,7 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 #####WEB API / DOT NET / C# FEATURES
 
 | Description  |
-|:-------------:|
+|-------------|
 | Extension Methods |
 | Forcing Https Requests |
 | Dynamic linq for sorting and filtering Linq Queries that makes use of extension methods. |
