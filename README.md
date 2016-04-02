@@ -3,7 +3,7 @@ Another small app containing an AngularJS web client that accesses resources thr
 This app demonstrates a host of features listed below. Hosted on Azure. [http://angularuigrid.azurewebsites.net](angularuigrid.azurewebsites.net)
 
 
-#####FRAMEWORKS & PLUGINS
+#####FRAMEWORKS / PLUGINS / Languages
 
 | No.        | Description  |
 | -----------|-------------|
@@ -19,6 +19,8 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 | 10 | Hoe HTML Template |
 | 11 | Bootstrap V4 alpha |
 | 12 | jQuery |
+| 12 | C# |
+| 12 | Linq |
 
 
 #####WEB API / DOT NET / C# FEATURES
