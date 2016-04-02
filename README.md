@@ -53,6 +53,7 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 
 #####Structure
 /**************************************************************************/
+
 | Project Name        | Type           | Description  |
 | ---------------- |:-------------:| -----:|
 | AdminClient     | Empty Asp.Net Web Project | $1600 |
