@@ -1,5 +1,6 @@
 ﻿using Ninject;
 using Ninject.Syntax;
+using Ninject.Web.Common;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
@@ -21,14 +22,14 @@ namespace WorkingWithWebApi2.DataService
             var kernel = new StandardKernel();
 
             // Model Factory Bindings
-            kernel.Bind<IProductModelFactory>().To<ProductModelFactory>();
-            kernel.Bind<ICategoryModelFactory>().To<CategoryModelFactory>();
-            kernel.Bind<ISupplierModelFactory>().To<SupplierModelFactory>();
+            kernel.Bind<IProductModelFactory>().To<ProductModelFactory>().InRequestScope();
+            kernel.Bind<ICategoryModelFactory>().To<CategoryModelFactory>().InRequestScope();
+            kernel.Bind<ISupplierModelFactory>().To<SupplierModelFactory>().InRequestScope();
 
             // Service Bindings
-            kernel.Bind<IProductService>().To<ProductService>();
-            kernel.Bind<ICategoryService>().To<CategoryService>();
-            kernel.Bind<ISupplierService>().To<SupplierService>();
+            kernel.Bind<IProductService>().To<ProductService>().InRequestScope();
+            kernel.Bind<ICategoryService>().To<CategoryService>().InRequestScope();
+            kernel.Bind<ISupplierService>().To<SupplierService>().InRequestScope();
 
             return kernel;
         }
