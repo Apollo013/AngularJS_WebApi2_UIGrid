@@ -64,8 +64,8 @@ Before you start, you will need to specify a database connection in your Web.con
 
 #####Structure
 
-| No.        | Project Name        | Project Type           | 
-| -----------| ---------------- |-------------|
+| No.        | Project Name        | Project Type  | Description  |
+| -----------| ---------------- |-------------| -------------|
 |1 | AdminClient     | Empty Web Project | Web User Interface |
 |2| BusinessServices      |  Class Library      | Business logic layer that communicates between the web api and repositories |
 |3| DataAccessLayer | Class Library      | Responixible for communicating with the database |
