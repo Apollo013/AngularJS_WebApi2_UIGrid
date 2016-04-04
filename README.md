@@ -2,6 +2,8 @@
 Another small app containing an AngularJS web client that accesses resources through a Web Api 2 service. 
 This app demonstrates a host of features listed below. Hosted on Azure. [http://angularuigrid.azurewebsites.net](angularuigrid.azurewebsites.net)
 
+Before you start, you will need to specify a database connection in your Web.config file.
+
 
 #####FRAMEWORKS / PLUGINS / Languages
 
@@ -64,13 +66,13 @@ This app demonstrates a host of features listed below. Hosted on Azure. [http://
 
 | No.        | Project Name        | Project Type           | 
 | -----------| ---------------- |-------------|
-|1 | AdminClient     | Empty Web Project |
-|2| BusinessServices      |  Class Library      | 
-|3| DataAccessLayer | Class Library      | 
-|4| DataService | Web Api 2 | 
-|5| Models.DomainEntities | Class Library | 
-|6| Models.ViewModels | Class Library | 
-|7| Repositories | Class Library | 
-|8| UnitTests | Unit Test | 
+|1 | AdminClient     | Empty Web Project | Web User Interface |
+|2| BusinessServices      |  Class Library      | Business logic layer that communicates between the web api and repositories |
+|3| DataAccessLayer | Class Library      | Responixible for communicating with the database |
+|4| DataService | Web Api 2 | Our web api data service |
+|5| Models.DomainEntities | Class Library | Models used for constructing our database tables |
+|6| Models.ViewModels | Class Library | View models used for sending information to the client |
+|7| Repositories | Class Library | Repository layer |
+|8| UnitTests | Unit Test | Testing |
 
 
