@@ -68,7 +68,7 @@ Before you start, you will need to specify a database connection in your Web.con
 | -----------| ---------------- |-------------| -------------|
 |1 | AdminClient     | Empty Web Project | Web User Interface |
 |2| BusinessServices      |  Class Library      | Business logic layer that communicates between the web api and repositories |
-|3| DataAccessLayer | Class Library      | Responixible for communicating with the database |
+|3| DataAccessLayer | Class Library      | Responisible for communicating with the database |
 |4| DataService | Web Api 2 | Our web api data service |
 |5| Models.DomainEntities | Class Library | Models used for constructing our database tables |
 |6| Models.ViewModels | Class Library | View models used for sending information to the client |
