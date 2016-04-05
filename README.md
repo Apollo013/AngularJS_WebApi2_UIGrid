@@ -66,7 +66,7 @@ Developed using VS2015 Community
 |6| External Filtering with UI-Grid |
 |7| Displaying non-blocking notifications using Toastr |
 |8| Displaying loading bar during http requests |
-|9| Form validation |
+|9| Form validation using AngularJS |
 
 
 #####Structure
