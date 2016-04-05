@@ -25,9 +25,9 @@ Before you start, you will need to specify a database connection in your Web.con
 | 10 | Hoe HTML Template |
 | 11 | Bootstrap V4 alpha |
 | 12 | jQuery |
-| 12 | C# |
-| 12 | Linq |
-
+| 13 | C# |
+| 14 | Linq |
+| 15 | Code First - Fluent Api |
 
 #####WEB API / DOT NET / C# FEATURES
 
