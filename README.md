@@ -2,9 +2,7 @@
 Another small app containing an AngularJS web client that accesses resources through a Web Api 2 service. 
 This app demonstrates a host of features listed below. Hosted on Azure. [HERE](http://angularuigrid.azurewebsites.net)
 
-The primary goal of this is to show you how to implement the AngularJS UI-Grid plugin, and demonstrate how to page, sort and filter data on the server, rather that requesting all data from the server and allowing UI-Grids internal implementation to do these for us.
-
-This app also demonstrates other features including DI, security, logging & design patterns.
+The primary goal of this is to show you how to implement the AngularJS UI-Grid plugin, and demonstrate how to page, sort and filter data on the server, rather that requesting all data from the server and allowing UI-Grids internal implementation to do these for us. However, this app also demonstrates other features including DI, security, logging & design patterns.
 
 Before you start, you will need to specify a database connection in your Web.config file.
 
