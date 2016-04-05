@@ -2,7 +2,9 @@
 Another small app containing an AngularJS web client that accesses resources through a Web Api 2 service. 
 This app demonstrates a host of features listed below. Hosted on Azure. [HERE](http://angularuigrid.azurewebsites.net)
 
-The primary goal of this is to show you how to implement the AngularJS UI-Grid plugin, and demonstrate how to page, sort and filter data on the server, rather that requesting all data from the server and allowing UI-Grids internal implementation to do these for us. However, this app also demonstrates other features including DI, security, logging & design patterns.
+The primary goal of this is to show you how to implement the AngularJS UI-Grid plugin, and demonstrate how to page, sort and filter data on the server, rather that requesting all data from the server and allowing UI-Grids internal implementation to do these for us. A form is provided for creating & updating (validation included), and the ability to remove a record is also available. 
+
+This app also demonstrates other features including DI, security, logging & design patterns.
 
 Before you start, you will need to specify a database connection in your Web.config file.
 
@@ -44,11 +46,12 @@ Developed using VS2015 Community
 |10| Unit Testing |
 |11| Generic Repository |
 |12| Exception Handling |
-|13| Use of Reflection to check property names passed to controllers |
+|13| Use of Reflection to check property names passed to controllers via url |
 |14| Logging using Microsoft.ApplicationInsights.Log4NetAppender |
 |15| Recursion |
 |16| CORS Enabled to accept only a single client from making requests, plus specifying which verbs to accept |
 |17| Authorize attribute used to authorize access to specific endpoints |
+|18| CRUD functionality & Data validation |
 
 
 #####ANGULARJS FEATURES
@@ -63,6 +66,7 @@ Developed using VS2015 Community
 |6| External Filtering with UI-Grid |
 |7| Displaying non-blocking notifications using Toastr |
 |8| Displaying loading bar during http requests |
+|9| Form validation |
 
 
 #####Structure
