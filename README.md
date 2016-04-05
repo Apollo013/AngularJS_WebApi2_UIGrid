@@ -9,7 +9,7 @@ This app also demonstrates other features including DI, security, logging & desi
 Before you start, you will need to specify a database connection in your Web.config file.
 
 
-#####FRAMEWORKS / PLUGINS / Languages
+#####FRAMEWORKS / PLUGINS / LANGUAGES
 
 | No.        | Description  |
 | -----------|-------------|
