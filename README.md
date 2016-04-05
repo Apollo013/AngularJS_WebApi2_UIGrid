@@ -8,6 +8,7 @@ This app also demonstrates other features including DI, security, logging & desi
 
 Before you start, you will need to specify a database connection in your Web.config file.
 
+Developed using VS2015 Community
 
 #####FRAMEWORKS / PLUGINS / LANGUAGES
 
