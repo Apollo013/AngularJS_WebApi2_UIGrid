@@ -36,6 +36,7 @@ Developed using VS2015 Community
 | 16 | HTML |
 | 17 | Microsoft.ApplicationInsights |
 | 18 | Log4Net |
+| 19 | JUnit |
 
 ---
 
@@ -53,7 +54,7 @@ Developed using VS2015 Community
 | Dependancy Injection |
 | Configuring domain entity tables using 'EntityTypeConfiguration' with ef migrations. |
 | Creating custom 'IHttpActionResult' responses |
-| Unit Testing |
+| Unit Testing with JUnit |
 | Generic Repository |
 | Exception Handling |
 | Use of Reflection to check property names passed to controllers via url |
