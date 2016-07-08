@@ -41,43 +41,44 @@ Developed using VS2015 Community
 
 ####Server-Side Features
 
-| No.        | Description  |
-| -----------|-------------|
-|1| Extension Methods |
-|2| Forcing Https Requests |
-|3| Dynamic linq for sorting and filtering Linq Queries that makes use of extension methods. |
-|4| OWIN setup & configuration |
-|5| Attribute Routing |
-|6| Repository, Unit of Work & Model Factory Patterns. |
-|7| Dependancy Injection |
-|8| Configuring domain entity tables using 'EntityTypeConfiguration' with ef migrations. |
-|9| Creating custom 'IHttpActionResult' responses |
-|10| Unit Testing |
-|11| Generic Repository |
-|12| Exception Handling |
-|13| Use of Reflection to check property names passed to controllers via url |
-|14| Logging using Microsoft.ApplicationInsights.Log4NetAppender |
-|15| Recursion |
-|16| CORS Enabled to accept only a single client from making requests, plus specifying which verbs to accept |
-|17| Authorize attribute used to authorize access to specific endpoints |
-|18| CRUD functionality & Data validation |
+| Description |
+|-------------|
+| Extension Methods |
+| Forcing Https Requests |
+| IQueryable(T) extension method that uses Dynamic Linq for Dynamic sorting of queries |
+| IQueryable(T) extension method that uses Dynamic Linq for Dynamic filtering of queries |
+| OWIN setup & configuration |
+| Attribute Routing |
+| Repository, Unit of Work & Model Factory Patterns. |
+| Dependancy Injection |
+| Configuring domain entity tables using 'EntityTypeConfiguration' with ef migrations. |
+| Creating custom 'IHttpActionResult' responses |
+| Unit Testing |
+| Generic Repository |
+| Exception Handling |
+| Use of Reflection to check property names passed to controllers via url |
+| Logging using Microsoft.ApplicationInsights.Log4NetAppender |
+| Recursion |
+| CORS Enabled to accept only a single client from making requests, plus specifying which verbs to accept |
+| Authorize attribute used to authorize access to specific endpoints |
+| CRUD functionality & Data validation |
 
 ---
 
 ####AngularJS Features
 
-| No.        | Description  |
-| -----------|-------------|
-|1| AngularJS $Http Interceptor for configuring Requests & response errors |
-|2| Making Restful calls in AngularJS using $http.post, put, get, delete |
-|3| Solving the Angularjs 404 routing error using the web.Config file (see admin client) |
-|4| External Pagination with UI-Grid |
-|5| External Sorting with UI-Grid |
-|6| External Filtering with UI-Grid |
-|7| Displaying non-blocking notifications using Toastr |
-|8| Displaying loading bar during http requests |
-|9| Form validation using AngularJS |
-|10| Routing using ngRoute |
+| Description  |
+|-------------|
+| AngularJS $Http Interceptor for configuring Requests & response errors |
+| Making Restful calls in AngularJS using $http.post, put, get, delete |
+| Solving the Angularjs 404 routing error using the web.Config file (see admin client) |
+| External Pagination with UI-Grid |
+| External Sorting with UI-Grid |
+| External Filtering with UI-Grid |
+| Displaying non-blocking notifications using Toastr |
+| Displaying loading bar during http requests |
+| Form validation using AngularJS |
+| Routing using ngRoute |
 
 ---
 
