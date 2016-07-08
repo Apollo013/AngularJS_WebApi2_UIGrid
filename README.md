@@ -10,7 +10,9 @@ Before you start, you will need to specify a database connection in your Web.con
 
 Developed using VS2015 Community
 
-#####FRAMEWORKS / PLUGINS / LANGUAGES
+---
+
+####FRAMEWORKS / PLUGINS / LANGUAGES
 
 | No.        | Description  |
 | -----------|-------------|
@@ -30,7 +32,9 @@ Developed using VS2015 Community
 | 14 | Linq |
 | 15 | Code First - Fluent Api |
 
-#####WEB API / DOT NET / C# FEATURES
+---
+
+####Server-Side FEATURES
 
 | No.        | Description  |
 | -----------|-------------|
@@ -53,6 +57,7 @@ Developed using VS2015 Community
 |17| Authorize attribute used to authorize access to specific endpoints |
 |18| CRUD functionality & Data validation |
 
+---
 
 #####ANGULARJS FEATURES
 
@@ -68,6 +73,7 @@ Developed using VS2015 Community
 |8| Displaying loading bar during http requests |
 |9| Form validation using AngularJS |
 
+---
 
 #####Structure
 
