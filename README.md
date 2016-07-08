@@ -12,7 +12,7 @@ Developed using VS2015 Community
 
 ---
 
-####FRAMEWORKS / PLUGINS / LANGUAGES
+####Frameworks / Plugins / Languages
 
 | No.        | Description  |
 | -----------|-------------|
@@ -26,15 +26,16 @@ Developed using VS2015 Community
 | 8 | AngularJS Loading Bar |
 | 9 | AngularJS UI-Grid |
 | 10 | Hoe HTML Template |
-| 11 | Bootstrap V4 alpha |
+| 11 | CSS Bootstrap V4 alpha |
 | 12 | jQuery |
 | 13 | C# |
 | 14 | Linq |
 | 15 | Code First - Fluent Api |
+| 16 | HTML |
 
 ---
 
-####Server-Side FEATURES
+####Server-Side Features
 
 | No.        | Description  |
 | -----------|-------------|
@@ -59,7 +60,7 @@ Developed using VS2015 Community
 
 ---
 
-#####ANGULARJS FEATURES
+####AngularJS Features
 
 | No.        | Description  |
 | -----------|-------------|
@@ -75,7 +76,7 @@ Developed using VS2015 Community
 
 ---
 
-#####Structure
+####Structure
 
 | No.        | Project Name        | Project Type  | Description  |
 | -----------| ---------------- |-------------| -------------|
