@@ -48,6 +48,7 @@ Developed using VS2015 Community
 | Forcing Https Requests |
 | IQueryable(T) extension method that uses Dynamic Linq for Dynamic sorting of queries |
 | IQueryable(T) extension method that uses Dynamic Linq for Dynamic filtering of queries |
+| Paging with Linq |
 | OWIN setup & configuration |
 | Attribute Routing |
 | Repository, Unit of Work & Model Factory Patterns. |
