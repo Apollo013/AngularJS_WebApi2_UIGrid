@@ -32,6 +32,8 @@ Developed using VS2015 Community
 | 14 | Linq |
 | 15 | Code First - Fluent Api |
 | 16 | HTML |
+| 17 | Microsoft.ApplicationInsights |
+| 18 | Log4Net |
 
 ---
 
@@ -73,6 +75,7 @@ Developed using VS2015 Community
 |7| Displaying non-blocking notifications using Toastr |
 |8| Displaying loading bar during http requests |
 |9| Form validation using AngularJS |
+|10| Routing using ngRoute |
 
 ---
 
