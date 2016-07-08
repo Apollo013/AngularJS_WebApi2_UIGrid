@@ -92,4 +92,10 @@ Developed using VS2015 Community
 |7| Repositories | Class Library | Repository layer |
 |8| UnitTests | Unit Test | Testing |
 
+---
+
+####Resources
+| Title | Author | Publisher |
+|-------|--------|-----------|
+|[UI-Grid-Info](http://ui-grid.info/docs/#/tutorial)| | UI Grid |
 
