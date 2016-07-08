@@ -101,4 +101,8 @@ Developed using VS2015 Community
 | Title | Author | Publisher |
 |-------|--------|-----------|
 |[UI-Grid-Info](http://ui-grid.info/docs/#/tutorial)| | UI Grid |
+|[System.Linq.Dynamic](https://dynamiclinq.codeplex.com/)| | CodePlex |
+|[Dynamic LINQ](http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)| Scott | ScottGu's Blog |
+
+
 
