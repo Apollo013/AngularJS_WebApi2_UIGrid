@@ -1,6 +1,10 @@
-# AngularJS_WebApi2_UIGrid
+# AspNet_WebApi2_AngularJS_UIGrid
+
+---
+### Description
+
 Another small app containing an AngularJS web client that accesses resources through a Web Api 2 service. 
-This app demonstrates a host of features listed below. Hosted on Azure. [HERE](http://angularuigrid.azurewebsites.net)
+This app demonstrates a host of features listed below. Hosted on Azure.
 
 The primary goal of this is to show you how to implement the AngularJS UI-Grid plugin, and demonstrate how to page, sort and filter data on the server, rather that requesting all data from the server and allowing UI-Grids internal implementation to do these for us. A form is provided for creating & updating (validation included), and the ability to remove a record is also available. (Although not on the live site)
 
@@ -10,7 +14,7 @@ Before you start, you will need to specify a database connection in your Web.con
 
 ---
 
-Developed using VS2015 Community
+Developed using Visual Studio 2015 Community
 
 ---
 
